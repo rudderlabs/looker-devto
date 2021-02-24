@@ -11,3 +11,5 @@ datagroup: rudder_devto_metrics_default_datagroup {
 persist_with: rudder_devto_metrics_default_datagroup
 
 explore: devto_post_performance {}
+
+explore: current_post_performance {}
