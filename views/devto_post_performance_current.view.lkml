@@ -1,4 +1,4 @@
-view: devto_current_post_performance {
+view: devto_post_performance_current {
   derived_table: {
     sql: SELECT
         devto_post_performance."URL",
