@@ -1,30 +1,28 @@
-<p align="center"><a href="https://rudderstack.com"><img src="https://raw.githubusercontent.com/rudderlabs/rudder-server/master/resources/RudderStack.png" alt="RudderStack - An Open Source Customer Data Platform" height="90"/></a></p>
+<p align="center"><a href="https://rudderstack.com"><img src="https://raw.githubusercontent.com/rudderlabs/rudder-server/master/resources/RudderStack.png" alt="RudderStack - The smart customer data pipeline" height="90"/></a></p>
 <h1 align="center"></h1>
-<p align="center"><b>The warehouse-first customer data pipeline built for devs</b></p>
+<p align="center"><b>The smart customer data pipeline</b></p>
 <br/>
 
-# \*\* Repo Name \*\*
+# looker-devto
 
-\*\* Repo description \*\*
+The _looker-devto_ repo contains the Looker model, views, and dashboards for RudderStack's dev.to reporting in Looker.
+
+For information about how our dev.to data was warehoused, read [our post on dev.to](https://dev.to/rudderstack/warehousing-all-of-our-orgs-dev-to-data-in-less-than-25-lines-new-of-code-1908) about how we did it using RudderStack and Google Sheets.
+
+
+Questions about RudderStack? Please join our [Slack channel](https://resources.rudderstack.com/join-rudderstack-slack).
+
+| Try **RudderStack Cloud Free** - a free tier of [RudderStack Cloud](https://resources.rudderstack.com/rudderstack-cloud). Click [here](https://app.rudderlabs.com/signup?type=freetrial) to start building a smarter customer data pipeline today, with RudderStack Cloud. |
 |:------|
-
-Questions? Please join our [Slack channel](https://resources.rudderstack.com/join-rudderstack-slack) or read about us on [Product Hunt](https://www.producthunt.com/posts/rudderstack).
-
-# Why Use \*\* Software Name \*\*
-
-\*\* Describe what software does. \*\*
 
 # Key Features
 
-\*\* Describe key features, if necessary. \*\*
-
-# Get Started
-
-\*\* Describe how to use the software. \*\*
+* 4 views - all data, most current data, 1 week ago data, 1 month ago data - to make comparison reporting easy.
+* 2 dashboards - organization performance and individual post performance
 
 # License
 
-RudderStack \*\* software name \*\* is released under the [AGPLv3 License][agplv3_license].
+RudderStack's Looker model, views, and dashboards for their dev.to data is released under [the MIT License][mit_license].
 
 # Contribute
 
@@ -45,9 +43,9 @@ We would love to see you contribute to RudderStack. Get more information on how 
 # \*\* Optional \*\* :clap:  Our Supporters
 
 \*\* Update the repo names below. \*\*<br />
-
-[![Stargazers repo roster for @rudderlabs/rudder-server](https://reporoster.com/stars/rudderlabs/rudder-repo-template)](https://github.com/rudderlabs/rudder-repo-template/stargazers)
-[![Forkers repo roster for @rudderlabs/rudder-server](https://reporoster.com/forks/rudderlabs/rudder-repo-template)](https://github.com/rudderlabs/rudder-repo-template/network/members)
+https://github.com/rudderlabs/looker-devto
+[![Stargazers repo roster for @rudderlabs/looker-devto](https://reporoster.com/stars/rudderlabs/looker-devto)](https://github.com/rudderlabs/looker-devto/stargazers)
+[![Forkers repo roster for @rudderlabs/looker-devto](https://reporoster.com/forks/rudderlabs/looker-devto)](https://github.com/rudderlabs/looker-devto/network/members)
 
 <!----variables---->
 
@@ -60,6 +58,7 @@ We would love to see you contribute to RudderStack. Get more information on how 
 [rudderstack-blog]: https://rudderstack.com/blog/
 [hackernews]: https://news.ycombinator.com/item?id=21081756
 [producthunt]: https://www.producthunt.com/posts/rudderstack
+[mit_license]: https://opensource.org/licenses/MIT
 [agplv3_license]: https://www.gnu.org/licenses/agpl-3.0-standalone.html
 [sspl_license]: https://www.mongodb.com/licensing/server-side-public-license
 [config-generator]: https://github.com/rudderlabs/config-generator
