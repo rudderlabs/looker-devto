@@ -16,3 +16,9 @@ explore: devto_post_performance {
 explore: devto_post_performance_current {
   label: "devto Post Performance - Current"
 }
+explore: devto_post_performance_1_week {
+  label: "devto Post Performance - 1 Week Ago"
+}
+explore: devto_post_performance_1_month {
+  label: "devto Post Performance - 1 Month Ago"
+}

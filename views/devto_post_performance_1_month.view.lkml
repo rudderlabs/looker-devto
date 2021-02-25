@@ -1,4 +1,4 @@
-view: devto_post_performance_current {
+view: devto_post_performance_1_month {
   derived_table: {
     sql: SELECT
         devto_post_performance."URL",
@@ -17,7 +17,7 @@ view: devto_post_performance_current {
         MAX(devto_post_performance."PUBLISHED_AT") AS "PUBLISHED_AT",
         MAX(devto_post_performance."SIMPLESENTAT") AS "SIMPLESENTAT"
       FROM "DEVTO_ORG"."DEVTO_POST_PERFORMANCE"
-      WHERE "SIMPLESENTAT" = (SELECT MAX("SIMPLESENTAT") FROM "DEVTO_ORG"."DEVTO_POST_PERFORMANCE")
+      WHERE "SIMPLESENTAT" = DATEADD(MONTH, -1, (SELECT MAX("SIMPLESENTAT") FROM "DEVTO_ORG"."DEVTO_POST_PERFORMANCE"))
       GROUP BY "URL"
        ;;
   }
