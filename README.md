@@ -40,10 +40,8 @@ We would love to see you contribute to RudderStack. Get more information on how 
 - [HackerNews][hackernews]
 - [Product Hunt][producthunt]
 
-# \*\* Optional \*\* :clap:  Our Supporters
+# :clap:  Our Supporters
 
-\*\* Update the repo names below. \*\*<br />
-https://github.com/rudderlabs/looker-devto
 [![Stargazers repo roster for @rudderlabs/looker-devto](https://reporoster.com/stars/rudderlabs/looker-devto)](https://github.com/rudderlabs/looker-devto/stargazers)
 [![Forkers repo roster for @rudderlabs/looker-devto](https://reporoster.com/forks/rudderlabs/looker-devto)](https://github.com/rudderlabs/looker-devto/network/members)
 
