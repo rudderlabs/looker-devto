@@ -3,7 +3,7 @@ view: devto_post_performance {
     ;;
 
   dimension: comments_count {
-    type: string
+    type: number
     sql: ${TABLE}."COMMENTS_COUNT" ;;
   }
 
@@ -55,17 +55,17 @@ view: devto_post_performance {
   }
 
   dimension: page_views_count {
-    type: string
+    type: number
     sql: ${TABLE}."PAGE_VIEWS_COUNT" ;;
   }
 
   dimension: positive_reactions_count {
-    type: string
+    type: number
     sql: ${TABLE}."POSITIVE_REACTIONS_COUNT" ;;
   }
 
   dimension: public_reactions_count {
-    type: string
+    type: number
     sql: ${TABLE}."PUBLIC_REACTIONS_COUNT" ;;
   }
 

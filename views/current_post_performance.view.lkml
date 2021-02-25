@@ -18,11 +18,6 @@ view: current_post_performance {
        ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
-
   dimension: devto_post_performance_title {
     type: string
     sql: ${TABLE}."devto_post_performance.title" ;;
@@ -39,23 +34,46 @@ view: current_post_performance {
   }
 
   dimension: devto_post_performance_page_views_count {
-    type: string
+    type: number
     sql: ${TABLE}."devto_post_performance.page_views_count" ;;
   }
 
   dimension: devto_post_performance_public_reactions_count {
-    type: string
+    type: number
     sql: ${TABLE}."devto_post_performance.public_reactions_count" ;;
   }
 
-  dimension: devto_post_performance_published_time {
-    type: string
+  dimension_group: devto_post_performance_published_time {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}."devto_post_performance.published_time" ;;
   }
 
-  dimension: devto_post_performance_simplesentat_time {
-    type: string
+  dimension_group: devto_post_performance_simplesentat_time {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     sql: ${TABLE}."devto_post_performance.simplesentat_time" ;;
+  }
+
+  measure: count {
+    type: count
+    drill_fields: [devto_post_performance_user_username, devto_post_performance.title]
   }
 
   set: detail {
@@ -63,10 +81,6 @@ view: current_post_performance {
       devto_post_performance_title,
       devto_post_performance_url,
       devto_post_performance_user_username,
-      devto_post_performance_page_views_count,
-      devto_post_performance_public_reactions_count,
-      devto_post_performance_published_time,
-      devto_post_performance_simplesentat_time
     ]
   }
 }
