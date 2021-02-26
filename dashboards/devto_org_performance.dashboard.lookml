@@ -32,7 +32,7 @@
     conditional_formatting_include_nulls: false
     defaults_version: 1
     listen: {}
-    row: 9
+    row: 15
     col: 0
     width: 24
     height: 10
@@ -650,3 +650,208 @@
     col: 18
     width: 6
     height: 3
+  - title: Post Views
+    name: Post Views
+    model: rudder_devto_metrics
+    explore: devto_post_performance
+    type: looker_line
+    fields: [devto_post_performance.simplesentat_time, sum_of_page_views_count, sum_of_positive_reactions_count,
+      sum_of_comments_count, devto_post_performance.count]
+    sorts: [devto_post_performance.simplesentat_time desc]
+    limit: 5000
+    dynamic_fields: [{measure: sum_of_comments_count, based_on: devto_post_performance.comments_count,
+        expression: '', label: Sum of Comments Count, type: sum, _kind_hint: measure,
+        _type_hint: number}, {measure: sum_of_page_views_count, based_on: devto_post_performance.page_views_count,
+        expression: '', label: Sum of Page Views Count, type: sum, _kind_hint: measure,
+        _type_hint: number}, {measure: sum_of_positive_reactions_count, based_on: devto_post_performance.positive_reactions_count,
+        expression: '', label: Sum of Positive Reactions Count, type: sum, _kind_hint: measure,
+        _type_hint: number}]
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: false
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: false
+    interpolation: linear
+    y_axes: [{label: Post Views, orientation: left, series: [{axisId: sum_of_page_views_count,
+            id: sum_of_page_views_count, name: Sum of Page Views Count}], showLabels: true,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}]
+    series_types: {}
+    discontinuous_nulls: false
+    defaults_version: 1
+    hidden_fields: [sum_of_positive_reactions_count, sum_of_comments_count, devto_post_performance.count]
+    row: 9
+    col: 6
+    width: 6
+    height: 6
+  - title: Post Count
+    name: Post Count
+    model: rudder_devto_metrics
+    explore: devto_post_performance
+    type: looker_line
+    fields: [devto_post_performance.simplesentat_time, devto_post_performance.count,
+      sum_of_page_views_count, sum_of_positive_reactions_count, sum_of_comments_count]
+    sorts: [devto_post_performance.simplesentat_time desc]
+    limit: 5000
+    dynamic_fields: [{measure: sum_of_comments_count, based_on: devto_post_performance.comments_count,
+        expression: '', label: Sum of Comments Count, type: sum, _kind_hint: measure,
+        _type_hint: number}, {measure: sum_of_page_views_count, based_on: devto_post_performance.page_views_count,
+        expression: '', label: Sum of Page Views Count, type: sum, _kind_hint: measure,
+        _type_hint: number}, {measure: sum_of_positive_reactions_count, based_on: devto_post_performance.positive_reactions_count,
+        expression: '', label: Sum of Positive Reactions Count, type: sum, _kind_hint: measure,
+        _type_hint: number}]
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: false
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: false
+    interpolation: linear
+    y_axes: [{label: Post Count, orientation: left, series: [{axisId: devto_post_performance.count,
+            id: devto_post_performance.count, name: Devto Post Performance}], showLabels: true,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}]
+    series_types: {}
+    defaults_version: 1
+    hidden_fields: [sum_of_page_views_count, sum_of_positive_reactions_count, sum_of_comments_count]
+    row: 9
+    col: 0
+    width: 6
+    height: 6
+  - title: Positive Reactions
+    name: Positive Reactions
+    model: rudder_devto_metrics
+    explore: devto_post_performance
+    type: looker_line
+    fields: [devto_post_performance.simplesentat_time, sum_of_positive_reactions_count,
+      devto_post_performance.count, sum_of_page_views_count, sum_of_comments_count]
+    sorts: [devto_post_performance.simplesentat_time desc]
+    limit: 5000
+    dynamic_fields: [{measure: sum_of_comments_count, based_on: devto_post_performance.comments_count,
+        expression: '', label: Sum of Comments Count, type: sum, _kind_hint: measure,
+        _type_hint: number}, {measure: sum_of_page_views_count, based_on: devto_post_performance.page_views_count,
+        expression: '', label: Sum of Page Views Count, type: sum, _kind_hint: measure,
+        _type_hint: number}, {measure: sum_of_positive_reactions_count, based_on: devto_post_performance.positive_reactions_count,
+        expression: '', label: Sum of Positive Reactions Count, type: sum, _kind_hint: measure,
+        _type_hint: number}]
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: false
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: false
+    interpolation: linear
+    y_axes: [{label: Positive Reactions, orientation: left, series: [{axisId: sum_of_positive_reactions_count,
+            id: sum_of_positive_reactions_count, name: Sum of Positive Reactions Count}],
+        showLabels: true, showValues: true, unpinAxis: false, tickDensity: default,
+        tickDensityCustom: 5, type: linear}]
+    series_types: {}
+    defaults_version: 1
+    hidden_fields: [sum_of_page_views_count, sum_of_comments_count, devto_post_performance.count]
+    row: 9
+    col: 12
+    width: 6
+    height: 6
+  - title: Comments
+    name: Comments
+    model: rudder_devto_metrics
+    explore: devto_post_performance
+    type: looker_line
+    fields: [devto_post_performance.simplesentat_time, sum_of_comments_count, devto_post_performance.count,
+      sum_of_page_views_count, sum_of_positive_reactions_count]
+    sorts: [devto_post_performance.simplesentat_time desc]
+    limit: 5000
+    dynamic_fields: [{measure: sum_of_comments_count, based_on: devto_post_performance.comments_count,
+        expression: '', label: Sum of Comments Count, type: sum, _kind_hint: measure,
+        _type_hint: number}, {measure: sum_of_page_views_count, based_on: devto_post_performance.page_views_count,
+        expression: '', label: Sum of Page Views Count, type: sum, _kind_hint: measure,
+        _type_hint: number}, {measure: sum_of_positive_reactions_count, based_on: devto_post_performance.positive_reactions_count,
+        expression: '', label: Sum of Positive Reactions Count, type: sum, _kind_hint: measure,
+        _type_hint: number}]
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    limit_displayed_rows: false
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: false
+    interpolation: linear
+    y_axes: [{label: Comments, orientation: left, series: [{axisId: sum_of_comments_count,
+            id: sum_of_comments_count, name: Sum of Comments Count}], showLabels: true,
+        showValues: true, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
+        type: linear}]
+    series_types: {}
+    defaults_version: 1
+    hidden_fields: [sum_of_page_views_count, devto_post_performance.count, sum_of_positive_reactions_count]
+    row: 9
+    col: 18
+    width: 6
+    height: 6
