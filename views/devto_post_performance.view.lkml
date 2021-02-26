@@ -1,6 +1,26 @@
 view: devto_post_performance {
-  sql_table_name: "DEVTO_ORG"."DEVTO_POST_PERFORMANCE"
-    ;;
+  derived_table: {
+    sql: SELECT
+        devto_post_performance."URL",
+        MAX(devto_post_performance."TITLE") AS "TITLE",
+        MAX(devto_post_performance."PAGE_VIEWS_COUNT") AS "PAGE_VIEWS_COUNT",
+        MAX(devto_post_performance."POSITIVE_REACTIONS_COUNT") AS "POSITIVE_REACTIONS_COUNT",
+        MAX(devto_post_performance."PUBLIC_REACTIONS_COUNT") AS "PUBLIC_REACTIONS_COUNT",
+        MAX(devto_post_performance."COMMENTS_COUNT") AS "COMMENTS_COUNT",
+        MAX(devto_post_performance."ORGANIZATION_USERNAME") AS "ORGANIZATION_USERNAME",
+        MAX(devto_post_performance."USER_USERNAME") AS "USER_USERNAME",
+        MAX(devto_post_performance."TAG_LIST") AS "TAG_LIST",
+        MAX(devto_post_performance."TYPE_OF") AS "TYPE_OF",
+        MAX(devto_post_performance."CREATED_AT") AS "CREATED_AT",
+        MAX(devto_post_performance."EDITED_AT") AS "EDITED_AT",
+        MAX(devto_post_performance."LAST_COMMENT_AT") AS "LAST_COMMENT_AT",
+        MAX(devto_post_performance."PUBLISHED_AT") AS "PUBLISHED_AT",
+        MAX(devto_post_performance."SENT_AT") AS "SENT_AT",
+        devto_post_performance."SIMPLESENTAT"
+      FROM "DEVTO_ORG"."DEVTO_POST_PERFORMANCE"
+      GROUP BY "SIMPLESENTAT", "URL"
+       ;;
+  }
 
   dimension: comments_count {
     type: number

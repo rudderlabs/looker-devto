@@ -32,7 +32,7 @@
     conditional_formatting_include_nulls: false
     defaults_version: 1
     listen: {}
-    row: 0
+    row: 6
     col: 0
     width: 24
     height: 6
@@ -98,7 +98,7 @@
     note_text: Select post from dashboard filter
     listen:
       Post Title: devto_post_performance.title
-    row: 6
+    row: 0
     col: 0
     width: 8
     height: 6
@@ -163,7 +163,7 @@
     note_text: Select post from dashboard filter
     listen:
       Post Title: devto_post_performance.title
-    row: 6
+    row: 0
     col: 8
     width: 8
     height: 6
@@ -228,7 +228,7 @@
     note_text: Select post from dashboard filter
     listen:
       Post Title: devto_post_performance.title
-    row: 6
+    row: 0
     col: 16
     width: 8
     height: 6
