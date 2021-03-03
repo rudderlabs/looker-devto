@@ -18,7 +18,7 @@ view: devto_post_performance_current {
         MAX(devto_post_performance."SIMPLESENTAT") AS "SIMPLESENTAT"
       FROM "DEVTO_ORG"."DEVTO_POST_PERFORMANCE"
       WHERE "SIMPLESENTAT" = (SELECT MAX("SIMPLESENTAT") FROM "DEVTO_ORG"."DEVTO_POST_PERFORMANCE")
-      GROUP BY "URL"
+      GROUP BY "SIMPLESENTAT", "URL"
        ;;
   }
 

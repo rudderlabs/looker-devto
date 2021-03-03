@@ -18,7 +18,7 @@ view: devto_post_performance_1_month {
         MAX(devto_post_performance."SIMPLESENTAT") AS "SIMPLESENTAT"
       FROM "DEVTO_ORG"."DEVTO_POST_PERFORMANCE"
       WHERE "SIMPLESENTAT" = DATEADD(MONTH, -1, (SELECT MAX("SIMPLESENTAT") FROM "DEVTO_ORG"."DEVTO_POST_PERFORMANCE"))
-      GROUP BY "URL"
+      GROUP BY "SIMPLESENTAT", "URL"
        ;;
   }
 
